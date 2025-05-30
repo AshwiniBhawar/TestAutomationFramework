@@ -1,1 +1,8 @@
 /target/
+/test-output/
+/logs/
+/*.html
+/*.log
+/screenshot/
+/replay_pid49568.log
+/hs_err_pid49568.log

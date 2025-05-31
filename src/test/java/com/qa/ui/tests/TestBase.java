@@ -55,7 +55,7 @@ public class TestBase {
 			LambdaTestUtility.quitSession();
 		}
 		
-		//homePage.quit();
+		homePage.quit();
 	}
 
 }

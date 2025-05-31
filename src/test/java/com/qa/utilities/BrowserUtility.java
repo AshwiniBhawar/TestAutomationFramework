@@ -115,6 +115,10 @@ public abstract class BrowserUtility {
 		logger.info("Element found and now returning the visible text: " + element.getText());
 		return element.getText();
 	}
+	
+	public void quit(){
+		driver.get().quit();
+	}
 
 	public String takeScreenshot(String name) {
 		TakesScreenshot ts = (TakesScreenshot) driver.get();

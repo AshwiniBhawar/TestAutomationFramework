@@ -52,10 +52,10 @@ public class TestBase {
 	public void tearDown() {
 		
 		if(isLambdaTest) {
-			LambdaTestUtility.quitSession();
+			LambdaTestUtility.quitSession();	//quit or close the browser session on LT
 		}
 		
-		//homePage.quit();
+		homePage.quit();	//local
 	}
 
 }

@@ -130,7 +130,8 @@ public abstract class BrowserUtility {
 	
 	public void clickOn(WebElement element) {
 		logger.info("Element found and now performing Click");
-		element.click();
+		WebElement elementClick = wait.until(ExpectedConditions.elementToBeClickable(element));
+		elementClick.click();
 	}
 
 	public void enterText(By locator, String textToEnter) {
@@ -168,7 +169,8 @@ public abstract class BrowserUtility {
 
 	public String getVisibileText(By locator) {
 		logger.info("Finding element with the locator: " + locator);
-		WebElement element = driver.get().findElement(locator);
+		//WebElement element = driver.get().findElement(locator);
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		logger.info("Element found and now returning the visible text: " + element.getText());
 		return element.getText();
 	}
@@ -178,9 +180,10 @@ public abstract class BrowserUtility {
 		return element.getText();
 	}
 	
-	public List<String> getAllVisibileText(By locator) {
+	public List<String> getAllVisibleText(By locator) {
 		logger.info("Finding all elements with the locator: " + locator);
-		List<WebElement> elementList = driver.get().findElements(locator);
+		//List<WebElement> elementList = driver.get().findElements(locator);
+		List<WebElement> elementList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 		logger.info("Element found and now printing the list of Elements");
 		List<String> visibleTextList= new ArrayList();
 		for(WebElement element:elementList) {
@@ -194,16 +197,17 @@ public abstract class BrowserUtility {
 	
 	public List<WebElement> getAllElements(By locator) {
 		logger.info("Finding all elements with the locator: " + locator);
-		List<WebElement> elementList = driver.get().findElements(locator);
+		//List<WebElement> elementList = driver.get().findElements(locator);
+		List<WebElement> elementList = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 		logger.info("Element found and now printing the list of Elements");
 		
 		return elementList;
 		
 	}
 	
-//	public void quit(){
-//		driver.get().quit();
-//	}
+	public void quit(){
+		driver.get().quit();
+	}
 
 	public String takeScreenshot(String name) {
 		TakesScreenshot ts = (TakesScreenshot) driver.get();

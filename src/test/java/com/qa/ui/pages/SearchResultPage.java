@@ -23,7 +23,7 @@ public class SearchResultPage extends BrowserUtility{
 	
 	public boolean isSearchTermPresentInProductList(String searchTerm) {
 		List<String> keywords=Arrays.asList(searchTerm.toLowerCase().split(" "));
-		List<String> productNamesList=getAllVisibileText(ALL_PRODUCT_LISTS_LOCATOR);
+		List<String> productNamesList=getAllVisibleText(ALL_PRODUCT_LISTS_LOCATOR);
 		
 		int count=0;
 		for (String productName : productNamesList) {

@@ -85,7 +85,7 @@ Install my-project with npm
 
 ## Reports
 
-- Reports: After execution, a detailed HTML report will be generated at ./ExtentReport.html
+After execution, a detailed HTML report will be generated at ./ExtentReport.html
 
 The report contains information on test cases executed, passed, failed, and skipped, along with screenshots for failed tests.
 

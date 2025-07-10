@@ -43,7 +43,7 @@ Download Link: https://maven.apache.org/download.cgi
 
 ## Technologies Used
 
-- Java 11
+- Java 17
 - TestNG
 - OpenCSV
 - Gson

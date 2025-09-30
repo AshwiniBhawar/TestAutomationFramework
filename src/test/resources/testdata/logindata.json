@@ -1,0 +1,15 @@
+{
+	"data":[
+		{
+			"email":"automationframework@gmail.com",
+			"password": "tester1234",
+			"title":"Automation Framework"
+		},
+		
+		{
+			"email":"automationnframeworkk@gmail.com",
+			"password": "tester1234",
+			"title":"Automationn frameworkkk"
+		}
+	]
+}
